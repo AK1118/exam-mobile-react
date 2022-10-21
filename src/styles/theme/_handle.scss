@@ -1,0 +1,42 @@
+@import "./theme";
+
+@mixin themeify {
+    @each $theme-name,$theme-map in $themes {
+        //暴露全局
+        $theme-map:$theme-map !global;
+        //属性选择器选中使用了主题样式的节点并做出改变
+        [theme-data="#{$theme-name}"] & {
+            @include transition;
+            @content;
+        }
+    }
+}
+
+@function themed($key){
+    /**
+    * 使用函数拿到map内的元素，因为$map在themeify内已经暴露全局
+    */
+    @return map-get($map: $theme-map, $key: $key);
+}
+
+
+@mixin background_color($color) {
+    @include themeify{
+        background-color:themed($color) !important;
+    }
+}
+
+@mixin text_color($color) {
+    @include themeify{
+        color:themed($color) !important;
+    }
+}
+
+@function getColor($key){
+    @return themed($key);
+}
+
+@mixin transition {
+    transition-property: background,color;
+    transition-duration: 1s;
+}

@@ -1,0 +1,17 @@
+/**
+    主题样式数据源，以Map形式存储
+*/
+$themes:(
+    light:(
+        background-color:#ffffff,
+        text-color:rgba(0,0,0,0.65),
+        primary:white,
+        bg:red,
+    ),
+    dark:(
+        background-color:#181c27,
+        text-color:rgba(255,255,255,0.65),
+        primary:rgba(255,255,255,0.65),
+        bg:red,
+    ),
+);

@@ -1,0 +1,12 @@
+@import "./theme/handle";
+@import "./zcm-main.css";
+.page{
+    @include background_color("background-color");
+    width: 100vw;
+    height: 100vh;
+
+    --font-m:3vw;
+    --font-ms:2vw;
+    --font-lg:4vw;
+    --font-max:5vw;
+}
