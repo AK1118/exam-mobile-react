@@ -24,7 +24,7 @@ const CustomIndiCator=({total,current})=>{
                 context.toggle();
             }}>
                     <AppstoreOutline className='mr'/>
-                    <span className='current'>{current.toString().padStart(2,'0')}</span>
+                    <span className='current'>{(current+1).toString().padStart(2,'0')}</span>
                     <span>/</span>
                     <span>{total.toString().padStart(2,'0')}</span>
            </div>

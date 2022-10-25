@@ -40,6 +40,33 @@
 }
 
 
+.question-bubbleslist-wrapper{
+    width: 100%;
+    display: grid;
+    //气泡大小
+    $_bubble-size:11vw;
+    $_select_color:var(--answersed);
+    $_notselect_color:var(--notanswers);  
+    grid-template-columns: repeat(6,$_bubble-size);
+    row-gap:calc($_bubble-size/4);
+    justify-content: space-around;
+    .bubble{
+        // margin: 10px;
+        width: $_bubble-size;
+        height: $_bubble-size;
+        min-width: $_bubble-size;
+        min-height: $_bubble-size;
+        border-radius: 100%;
+        border: solid $_notselect_color 1px;
+        box-sizing: content-box;
+        text-align: center;
+        line-height: $_bubble-size;
+        font-size: var(--font-lg);
+        color: var(--notanswers);
+    }  
+
+}
+
 .question-panel{
     box-sizing: content-box;
     padding:0px 20px 0px 20px;
@@ -75,5 +102,5 @@
             font-size:var(--font-ms);
             border-radius: 3px;
         }
-    }
+    }   
 }
