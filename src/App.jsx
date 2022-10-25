@@ -1,10 +1,11 @@
 
 import AuthRouter from './router/authRouter';
 import Routes from './router/router';
+import Index from './views/index';
 const App=()=>{
   return (
     <AuthRouter>
-       <Routes></Routes>
+        <Routes></Routes>
     </AuthRouter>
   );
 }

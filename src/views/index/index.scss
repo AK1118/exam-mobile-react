@@ -1,0 +1,15 @@
+@import "@/styles/common.scss";
+
+.main-wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .body{
+        flex: 1;
+    }
+    .bottom{
+        flex: 0;
+        border-top: 1px solid #eeeeee;
+    }
+}

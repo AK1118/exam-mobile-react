@@ -7,7 +7,7 @@ const LazyLoad=(Components)=>{
                 ...加载中
             </div>
         }>
-            <Components/>
+           {Components}
         </Suspense>
     );
 }

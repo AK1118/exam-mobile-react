@@ -7,8 +7,9 @@ import BottomBar from './components/answers_status';
 import QuestionPanel from './components/question_panel';
 import questionList from './data';
 import QuestionBubblesList from './components/question_bubbles';
-
+import {useNavigate} from 'react-router-dom';
 const Exam=()=>{
+    const navigation = useNavigate();
     const Item=Swiper.Item;
     const itemList=[];
     const [current,setCurrent]=useState(1);
@@ -31,7 +32,7 @@ const Exam=()=>{
     return <div className='page'>
                 <NavBar 
                     onBack={()=>{
-                        console.log("点击返回");
+                        navigation(-1)
                     }}
                 >
                     <span>考试</span>
