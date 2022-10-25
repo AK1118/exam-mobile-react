@@ -9,6 +9,9 @@ const Home=()=>{
       <Button onClick={()=>{
             navigator('/exam');
       }} color="primary">考试</Button>
+       <Button onClick={()=>{
+            navigator('/login');
+      }} color="primary">登录</Button>
    </div>
 }
 

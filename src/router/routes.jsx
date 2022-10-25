@@ -1,11 +1,15 @@
 import LazyLoad from "../utils/lazyLoad";
-import Exam from "../views/exam";
-import Home from "../views/home";
 import Index from "../views/index";
-import Login from "../views/login";
 import {Navigate} from "react-router-dom";
-import Learn from "../views/learn";
-import My from "../views/my";
+import { lazy } from "react";
+
+
+const Home = lazy(()=>import("@/views/home"));
+const Exam = lazy(()=>import("@/views/exam"));
+const My = lazy(()=>import("@/views/my"));
+const Learn = lazy(()=>import("@/views/learn"));
+const Login = lazy(()=>import("@/views/login"));
+const _404 = lazy(()=>import("@/views/404"));
 
 const RouteMap=[
     {
@@ -32,11 +36,15 @@ const RouteMap=[
     },
     {
         path:"/exam",
-        element:<Exam></Exam>
+        element:LazyLoad(<Exam/>)
     },
     {
-        path:"/a",
-        element:<Login></Login>
+        path:"/login",
+        element:LazyLoad(<Login/>)
+    },
+    {
+        path:"*",
+        element:LazyLoad(<_404/>)
     },
 ];
 
