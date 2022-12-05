@@ -3,18 +3,14 @@ import '@/styles/common.scss';
 import { Button, Form, Input, NavBar, Toast } from 'antd-mobile';
 import { useEffect, useState } from 'react';
 import {EyeInvisibleOutline,EyeOutline} from "antd-mobile-icons"
+import { useNavigate } from 'react-router-dom';
 const Login=()=>{
     const {Item}=Form;
-
+    const navigation=useNavigate();
     const [visible,setVisible]=useState(true);
     const [enteringPassword,setEnteringPassword]=useState(false);
-    const [account,setAccount]=useState('');
-    const [password,setPassword]=useState('');
-
-
-    
-
-
+    const [account,setAccount]=useState('admin');
+    const [password,setPassword]=useState('123456a');
     return <div>
                 <div className="login-page">
                     <div className='form-wrapper'>
@@ -38,6 +34,7 @@ const Login=()=>{
                                         />:<EyeOutline
                                             onClick={()=>{setVisible(true)}}
                                         />
+                                        
                                     }
                                 </div>
                             }>
@@ -63,14 +60,20 @@ const Login=()=>{
                         <div>忘记密码</div>
                     </div>
                     <Button className='button mt-2'
-                        onClick={submit}
+                        onClick={()=>{
+                            submit(account,password,()=>{
+                                navigation('/');
+                            },()=>{
+
+                            });
+                        }}
                         color='success'>登录</Button>
                 </div>
             </div>
     </div>
 }
 
-const submit=(account,password)=>{
+const submit=(account,password,success,fail)=>{
     //提交表单
     if(!account||!password){
         //校验表单内容
@@ -87,7 +90,7 @@ const submit=(account,password)=>{
                 content:'登录成功',
                 duration:800,
                 afterClose:()=>{
-                    console.log("滑滑滑")
+                    success();
                 }
             }
         );
@@ -97,7 +100,7 @@ const submit=(account,password)=>{
                 content:'账号或者密码错误',
                 duration:800,
                 afterClose:()=>{
-                    console.log("滑滑滑")
+                   fail();
                 }
             }
         );
