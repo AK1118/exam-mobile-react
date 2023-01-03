@@ -1,12 +1,48 @@
 @import "./theme/handle";
 @import "./zcm-main.css";
+/*页面*/
 .page{
     @include background_color("background-color");
-    width: 100vw;
-    height: 100vh;
+    --font-m:12px;
+    --font-ms:14px;
+    --font-lg:16px;
+    --font-max:20px;
+    height: 100%;
+}
+.font_m{
+    font-size: 12px;
+}
+.font_ms{
+    font-size: 14px;
+}
+.font_lg{
+    font-size: 16px;
+}
+.font_max{
+    font-size: 20px;
+}
+/*文字颜色*/
+.textcolor{
+    @include text_color("text-color");
+}
+/*描述文字颜色*/
+.descriptcolor{
+   color: getColor("descript-color");
+}
+/*前景颜色*/
+.foreground_color{
+    @include background_color("foreground-color");
+}
 
-    --font-m:3vw;
-    --font-ms:2vw;
-    --font-lg:4vw;
-    --font-max:5vw;
+.round_3{
+    border-radius:3px;
+}
+.round_6{
+    border-radius:6px;
+}
+.round_9{
+    border-radius: 9px;
+}
+.round_max{
+    border-radius: 100%;
 }

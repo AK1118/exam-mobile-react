@@ -1,0 +1,67 @@
+@import "@/styles/common.scss";
+
+.user_info_bar{
+    display: flex;
+    padding: 24px;
+    box-sizing: border-box;
+    width:100%;
+    @extend .foreground_color;
+    .image_wrapper{
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-right: 10px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .info_wrapper{
+        display: flex;
+        flex-direction: column;
+        height:80px;
+        justify-content:space-around;
+        .name{
+            font-weight: bold;
+            padding-bottom: 3px;
+            @extend .font_max;
+            @extend .textcolor;
+        }
+        .description{
+            padding-bottom: 3px;
+            @extend .font_m;
+            @extend .descriptcolor;
+        }
+        .more_info_wrapper{
+            display: flex;
+            .item{
+                margin-right:10px;
+                @extend .textcolor;
+                @extend .font_m;
+            }
+        }
+    }
+}
+
+.more_function{
+    @extend .foreground_color;
+    @extend .textcolor;
+    margin-top: 10px;
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 10px;
+    .more_function_item_wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .more_function_item_label{
+            @extend .font_m;
+        }
+        .more_function_item_icon{
+            @extend .font_max;
+        }
+    }
+}

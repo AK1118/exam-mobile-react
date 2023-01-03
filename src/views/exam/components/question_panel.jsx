@@ -49,7 +49,7 @@ const Question=({question,answersType})=>{
             case QuestionTypeEnum.INPUT:return "简答题";
         }
     }
-    return <span className="question-wrapper">
+    return <span className="question-wrapper textcolor">
         <span className="label px mr">{label()}</span>
         {question}</span>
 }
@@ -88,7 +88,7 @@ const Answers=({args})=>{
     }
 
 
-    return <div className="answers-wrapper">
+    return <div className="answers-wrapper textcolor">
         {answers.map((item,index)=>{
             const label=LABELS[index];
             const isSelect=selectList[index]//false;

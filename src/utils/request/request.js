@@ -3,6 +3,8 @@ import axios from "axios";
 import qs from 'qs';
 import FastToast from "../fastToast";
 const {CancelToken}=axios;
+/*axios请求控制器，用于取消请求 */
+// const requestController=new AbortController();
 const token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmOTQyZjc3Ni0zYzQ3LTRkYjQtYjI2Mi1jY2U4YzIyMWQwNjkiLCJ1bmlxdWVfbmFtZSI6IjE3MyoqKioqMzI1IiwidHlwIjoi5bi46Z2S6Jek5aSn6I2v5oi_Iiwic2lkIjoiIiwiaWF0IjoiMTY3MDIyMTg0OCIsIm5iZiI6IjE2NzAyMjE4NDgiLCJleHAiOiIxNjcwMzA4MjQ4IiwiaXNzIjoiTEhaIiwiYXVkIjoiQWxsVXNlciJ9.qk_t7TrHNTULOq47OqWF-XrnnksF-bWbY5mIIY0qHKY';
 class RequestUtil{
     /**

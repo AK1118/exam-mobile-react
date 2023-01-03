@@ -2,7 +2,11 @@
 import AuthRouter from './router/authRouter';
 import Routes from './router/router';
 import Index from './views/index';
+import useChangeTheme from './utils/hooks/useChangeTheme';
 const App=()=>{
+  /*设置主题 */
+  const _useChangeTheme=useChangeTheme();
+  _useChangeTheme("light");
   return (
     <AuthRouter>
         <Routes></Routes>

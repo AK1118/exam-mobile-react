@@ -1,5 +1,6 @@
 //问题回答状态泡泡
 const QuestionBubblesList=({questionList,current,setCurrent})=>{
+    
     const bubbleValues=questionList.map((item,index)=>{
         if(index==current)return 'current';
         return item.answered?'selected':'unselect';

@@ -1,4 +1,4 @@
-import { TabBar } from "antd-mobile";
+import { Badge, TabBar } from "antd-mobile";
 import {useNavigate} from "react-router-dom";
 
 
@@ -8,13 +8,18 @@ export default ()=>{
     const tabs=[
         {
             key:'/home',
-            title:'首页'
-        },{
-            key:'/learn',
-            title:'学习'
-        },{
+            title:'首页',
+            badge:'',
+        },
+        // {
+        //     key:'/learn',
+        //     title:'学习',
+        //     badge:'',
+        // },
+        {
             key:'/my',
-            title:'我的'
+            title:'我的',
+            badge:'',
         }
     ];
     
@@ -23,15 +28,15 @@ export default ()=>{
             replace:true
         });
     }
-
     return <div>
         <TabBar onChange={onChangeTab}>
             {
                 tabs.map((item)=>{
                     return <Item
-                        key={item.key}
-                        title={item.title}
-                    ></Item>
+                             key={item.key}
+                              title={item.title}
+                              badge={item.badge}
+                            ></Item>
                 })
             }
         </TabBar>

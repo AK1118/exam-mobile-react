@@ -2,6 +2,7 @@
 .page{
     --answersed:#00be46;
     --notanswers:#cccccc;
+    background-color: #fcf0cc;
 }
 .swiper-wrapper{
     .item{
@@ -80,7 +81,7 @@
             border:solid 1px #cccccc;
             font-size: var(--font-ms);
             background-color: #ffffff;
-            box-shadow: 0px 3px 3px #ccc;
+            // box-shadow: 0px 3px 3px #ccc;
             display: flex;
             line-height: 0px;
             letter-spacing: 0px;
@@ -94,8 +95,9 @@
 
     .question-wrapper{
         font-size: var(--font-lg);
-        color: #23262d;
-        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        // font-weight: bold;
         .label{
             color: #ffffff;
             background-color: var(--answersed);
