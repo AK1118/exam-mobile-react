@@ -2,7 +2,7 @@ import '@/styles/common.scss'
 import { Button } from 'antd-mobile';
 import { useNavigate } from 'react-router-dom';
 import Tabbar from '../tabbar';
-import http from '../../utils/request/http';
+import http from "@/api/request/http.js"
 import './index.scss'
 const Home=()=>{
    const navigator = useNavigate();

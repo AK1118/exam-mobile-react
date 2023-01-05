@@ -3,15 +3,33 @@ import AuthRouter from './router/authRouter';
 import Routes from './router/router';
 import Index from './views/index';
 import useChangeTheme from './utils/hooks/useChangeTheme';
-import "@/i18n/config.js"
-const App=()=>{
+import { createContext, useState } from 'react';
+import "@/i18n/config.js";
+import useStorage from './utils/hooks/useStorage';
+import useTranslation from './utils/hooks/useTranslation';
+export const AppContext = createContext();
+const App = () => {
+  const [lng, setLng] = useState('zh');
   /*设置主题 */
-  const _useChangeTheme=useChangeTheme();
+  const _useChangeTheme = useChangeTheme();
+  /*切换语言 */
+  const _useTranslation=useTranslation();
+  /*持久化 */
+  const _storage=useStorage();
   _useChangeTheme("light");
+  const state = {
+    methods: {
+      changeLanguage: (lng) => {
+        setLng(lng);
+      }
+    }
+  };
   return (
-    <AuthRouter>
+    <AppContext.Provider value={state}>
+      <AuthRouter>
         <Routes></Routes>
-    </AuthRouter>
+      </AuthRouter>
+    </AppContext.Provider>
   );
 }
 export default App;

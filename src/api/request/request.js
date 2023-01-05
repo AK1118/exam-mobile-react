@@ -1,7 +1,7 @@
 import { base } from "antd-mobile/es/locales/base";
 import axios from "axios";
 import qs from 'qs';
-import FastToast from "../fastToast";
+import FastToast from "@/utils/fastToast";
 const {CancelToken}=axios;
 /*axios请求控制器，用于取消请求 */
 // const requestController=new AbortController();

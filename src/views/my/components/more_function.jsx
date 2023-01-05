@@ -4,16 +4,15 @@ import useChangeTheme from "../../../utils/hooks/useChangeTheme";
 import { Modal } from "antd-mobile";
 import useI18n from "../../../utils/hooks/usei18n";
 import useTranslation from "../../../utils/hooks/useTranslation";
-import { MyProvider } from "../index";
 import { useContext } from "react";
-
+import { AppContext } from "../../../App";
 
 export default function MoreFunction() {
     /**
      * 切换语言hook
      */
     const _usei18n=useI18n();
-    const context=useContext(MyProvider);
+    const context=useContext(AppContext);
     /**
      * 切换语言
      */
@@ -24,7 +23,7 @@ export default function MoreFunction() {
             closeOnAction:true,
             onAction:(item)=>{
                 _useTranslation(item.key,()=>{
-                    context.changeLanguage(item.key);
+                    context.methods.changeLanguage(item.key);
                 });
             },
             actions:[

@@ -23,7 +23,7 @@ const Login=()=>{
                         enteringPassword||!visible?<img src='src/assets/images/entring.png'></img>:<img src='src/assets/images/notentring.png'></img>
                     }
                     <Form>
-                        <Item layout="horizontal" className='foreground_color descriptcolor textcolor' label={_useI18n("login.account")}>
+                        <Item layout="horizontal" className='descriptcolor textcolor' label={_useI18n("login.account")}>
                             <Input 
                                 className='textcolor'
                                 onChange={(value)=>{
@@ -31,7 +31,7 @@ const Login=()=>{
                                 }}
                                 value={account} placeholder={_useI18n("login.accountPlaceholder")}></Input>
                         </Item>
-                        <Item layout="horizontal"  className='foreground_color descriptcolor' label={_useI18n("login.password")}
+                        <Item layout="horizontal"  className='descriptcolor' label={_useI18n("login.password")}
                             extra={
                                 <div>
                                     {

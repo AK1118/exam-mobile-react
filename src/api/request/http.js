@@ -1,5 +1,5 @@
 import { Toast } from "antd-mobile";
-import FastToast from "../fastToast";
+import FastToast from "@/utils/fastToast"
 import Request from "./request";
 
 const http=new Request();

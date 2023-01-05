@@ -1,14 +1,15 @@
 import { Badge, TabBar } from "antd-mobile";
 import {useNavigate} from "react-router-dom";
-
+import useI18n from "../../utils/hooks/usei18n";
 
 export default ()=>{
+    const _usei18n=useI18n();
     const {Item}=TabBar;
     const navigate=useNavigate();
     const tabs=[
         {
             key:'/home',
-            title:'首页',
+            title:_usei18n("tabbar.index"),
             badge:'',
         },
         // {
@@ -18,7 +19,7 @@ export default ()=>{
         // },
         {
             key:'/my',
-            title:'我的',
+            title:_usei18n("tabbar.my"),
             badge:'',
         }
     ];

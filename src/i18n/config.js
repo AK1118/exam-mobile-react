@@ -1,6 +1,6 @@
 import i18next from "i18next";
-import translation_zh from "./zh.json";
-import translation_en from "./en.json";
+import translation_zh from "./modules/zh.json";
+import translation_en from "./modules/en.json";
 
 const resources={
     zh:{
