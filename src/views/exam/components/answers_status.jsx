@@ -1,18 +1,19 @@
 import { AppstoreOutline,CheckCircleFill,ExclamationCircleFill} from 'antd-mobile-icons';
 import { useContext } from 'react';
 import BottomFloatingPanel, { bottomPanelContext } from './bottom_floating_panel';
-
+import useI18n from '../../../utils/hooks/usei18n';
 
 // 答题状态
 const AnswersStatus=()=>{
+    const _useI18n=useI18n();
     const context=useContext(bottomPanelContext);
     return <div className='answers-status' onClick={(e)=>{
         e.preventDefault();
         context.toggle();
     }}>
-        <span><CheckCircleFill color='var(--answersed)' className='mx'/>已答</span>
+        <span><CheckCircleFill color='var(--answersed)' className='mx'/>{_useI18n("exam.answered")}</span>
         <span className='mx-1'></span>
-        <span><ExclamationCircleFill color='var(--notanswers)'  className='mx'/>未答</span>
+        <span><ExclamationCircleFill color='var(--notanswers)'  className='mx'/>{_useI18n("exam.unanswered")}</span>
     </div>
 }
 

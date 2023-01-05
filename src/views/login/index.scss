@@ -1,20 +1,31 @@
-.login-page{
-    width:100vw;
+@import "@/styles/common.scss";
+.login-page-wrapper{
+    width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    
-    .form-wrapper{
-        width: 100%;
-      padding: 20px;
-      box-sizing:border-box;
+    flex-direction: column;
+    @extend .textcolor;
+    @extend .page;
+    .navbar{
+        @extend .foreground_color;
     }
-    .button{
-        width: 100%;
-    }
-    .forget-password{
-        width: 100%;
+    .login-page{
         display: flex;
-        justify-content: end;
+        align-items: center;
+        flex: 1;
+        @extend .foreground_color;
+        .form-wrapper{
+            width: 100%;
+          padding: 20px;
+          box-sizing:border-box;
+        }
+        .button{
+            width: 100%;
+        }
+        .forget-password{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
     }
 }

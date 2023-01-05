@@ -3,6 +3,7 @@ import AuthRouter from './router/authRouter';
 import Routes from './router/router';
 import Index from './views/index';
 import useChangeTheme from './utils/hooks/useChangeTheme';
+import "@/i18n/config.js"
 const App=()=>{
   /*设置主题 */
   const _useChangeTheme=useChangeTheme();

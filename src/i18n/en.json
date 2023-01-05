@@ -1,0 +1,42 @@
+{
+    "tabbar":{
+        "index":"Home",
+        "my":"My"
+    },
+    "morefunction":{
+        "setting":"Setting",
+        "theme":"Theme",
+        "language":"Language"
+    },
+    "themeDialog":{
+        "chooseTheme":"ChooseTheme",
+        "light":"Light",
+        "dark":"Dark"
+    },
+    "languageDialog":{
+        "chooseLanguage":"Translation Language",
+        "chinese":"Chinses",
+        "english":"English"
+    },
+    "login":{
+        "account":"Account",
+        "password":"Password",
+        "login":"Login",
+        "sign":"Sign",
+        "passwordPlaceholder":"Please input a password",
+        "accountPlaceholder":"Please input a Account",
+        "forgetPassword":"Forget The Password",
+        "loginSuccess":"Login success",
+        "wrongAccountOrPassword":"Wrong account or password",
+        "empty":"The account or password is empty"
+    },
+    "exam":{
+        "title":"Answer questions",
+        "answered":"Answered",
+        "unanswered":"Unanswered",
+        "singleChoice":"Single choice",
+        "multipleChoice":"Multiple choice",
+        "fillblank":"Fill in the blank"
+    },
+    "unspecific":"Something went wrong."
+}

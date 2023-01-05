@@ -7,8 +7,10 @@ import BottomFloatingPanel from './components/bottom_floating_panel';
 import QuestionBubblesList from './components/question_bubbles';
 import QuestionPanel from './components/question_panel';
 import questionList from './data';
+import useI18n from '../../utils/hooks/usei18n';
 import './index.scss';
 const Exam = () => {
+    const _usei18n=useI18n();
     const navigation = useNavigate();
     const Item = Swiper.Item;
     const itemList = [];
@@ -36,7 +38,7 @@ const Exam = () => {
                 navigation(-1)
             }}
         >
-            <span className='textcolor'>考试</span>
+            <span className='textcolor'>{_usei18n("exam.title")}</span>
         </NavBar>
         <div className='swiper-wrapper'>
             <Swiper ref={swiperRef} className="page" indicator={() => { }} onIndexChange={(current) => { setCurrent(current) }}>

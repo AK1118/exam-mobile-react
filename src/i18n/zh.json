@@ -1,0 +1,42 @@
+{
+    "tabbar":{
+        "index":"首页",
+        "my":"我的"
+    },
+    "morefunction":{
+        "setting":"设置",
+        "theme":"主题",
+        "language":"中文"
+    },
+    "themeDialog":{
+        "chooseTheme":"选择主题",
+        "light":"白",
+        "dark":"黑"
+    },
+    "languageDialog":{
+        "chooseLanguage":"切换语言",
+        "chinese":"中文",
+        "english":"English"
+    },
+    "login":{
+        "account":"账号",
+        "password":"密码",
+        "login":"登录",
+        "sign":"注册",
+        "passwordPlaceholder":"请输入密码",
+        "accountPlaceholder":"请输入账号",
+        "forgetPassword":"忘记密码",
+        "loginSuccess":"登录成功",
+        "wrongAccountOrPassword":"账号或密码错误",
+        "empty":"账号或密码为空"
+    },
+    "exam":{
+        "title":"考试",
+        "answered":"已答",
+        "unanswered":"未答",
+        "singleChoice":"单选",
+        "multipleChoice":"多选",
+        "fillblank":"填空"
+    },
+    "unspecific":"Something went wrong."
+}

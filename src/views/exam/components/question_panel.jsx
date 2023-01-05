@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import useI18n from "../../../utils/hooks/usei18n";
 import { AppstoreOutline,CheckCircleFill,ExclamationCircleFill} from 'antd-mobile-icons';
 // 问题答案类型枚举
 const QuestionTypeEnum={
@@ -6,6 +7,7 @@ const QuestionTypeEnum={
     MULTIPLE:"multiple",//多选
     INPUT:"input",//输入简答题
 };
+const _useI18n=useI18n();
 const LABELS='abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
 
 // 问题和答案面板
@@ -44,9 +46,9 @@ const checkQuestionType=(answers,answer)=>{
 const Question=({question,answersType})=>{
     const label=()=>{
         switch(answersType){
-            case QuestionTypeEnum.SINGLE:return "单选";
-            case QuestionTypeEnum.MULTIPLE:return "多选";
-            case QuestionTypeEnum.INPUT:return "简答题";
+            case QuestionTypeEnum.SINGLE:return _useI18n("exam.singleChoice");
+            case QuestionTypeEnum.MULTIPLE:return _useI18n("exam.multipleChoice");
+            case QuestionTypeEnum.INPUT:return _useI18n("exam.fillblank");
         }
     }
     return <span className="question-wrapper textcolor">

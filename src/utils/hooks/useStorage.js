@@ -38,4 +38,7 @@ class StorageUtil{
     }
 }
 
-export default new StorageUtil();
+const storage=new StorageUtil();
+export default function useStorage(){
+    return storage;
+}
